@@ -1,7 +1,7 @@
 //Environment variables
 require("dotenv").config();
 const { validateReqEnvs } = require("./utils");
-const reqEnvs = ["PORT", "HOST"];
+const reqEnvs = ["PORT", "HOST", "MONGO_URI"];
 validateReqEnvs(reqEnvs);
 
 //Mongoose
