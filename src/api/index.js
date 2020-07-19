@@ -1,9 +1,8 @@
-const coursesRoutes = require("./courses/routes");
-const studentsRoutes = require("./students/routes");
-const teachersRoutes = require("./teachers/routes");
+const express = require("express");
+const app = express();
 
-module.exports = {
-  coursesRoutes,
-  studentsRoutes,
-  teachersRoutes,
-};
+app.use(require("./courses/routes"));
+app.use(require("./students/routes"));
+app.use(require("./teachers/routes"));
+
+module.exports = app;

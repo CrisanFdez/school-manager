@@ -11,10 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 //Routes
-const { coursesRoutes, studentsRoutes, teachersRoutes } = require("./api");
-app.use(coursesRoutes);
-app.use(studentsRoutes);
-app.use(teachersRoutes);
+app.use(require("./api"));
 
 app.listen(port, () => {
   console.log(`Server running at http://${host}:${port}/`);
