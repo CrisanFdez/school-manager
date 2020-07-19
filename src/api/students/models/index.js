@@ -1,5 +1,4 @@
-const mongoose = require("mongoose");
-const { Schema } = mongoose;
+const { Schema, model } = require("mongoose");
 
 const schema = new Schema(
   {
@@ -14,6 +13,4 @@ const schema = new Schema(
 );
 
 schema.plugin(require("mongoose-autopopulate"));
-
-const model = mongoose.model("students", schema);
-module.exports = model;
+module.exports = model("students", schema);
